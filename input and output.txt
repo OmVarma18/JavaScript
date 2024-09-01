@@ -1,0 +1,12 @@
+To take an input in Js we can use 
+alert/prompt/log function
+
+
+If we want to take input from HTML we can use 
+getElementById()
+
+to show the output we can use 
+log function
+
+and in HTML we use 
+.innerHTML = 
