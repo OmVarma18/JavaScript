@@ -1,0 +1,280 @@
+To take an input in Js we can use 
+alert/prompt/log function
+
+
+If we want to take input from HTML we can use 
+getElementById()
+
+Writing into an HTML element, using innerHTML.
+Writing into the HTML output using document.write().
+Writing into an alert box, using window.alert().
+Writing into the browser console, using console.log()
+
+
+Hosting in Js
+Hoisting is JavaScript's default behavior of moving declarations to the top
+In JavaScript, a variable can be declared after it has been used.
+Only works for declaration and not initilization
+
+Wroks for all the function declared with function keyword not for arrow function
+
+Works dor var function not for const and letś
+
+
+Statements 
+combination of keywords varibales, operators are called statement it ends with a ';'.
+
+Data Types in Js
+There are 8 Primitive Data Types 
+1. String
+2. Number
+3. Bigint
+4. Boolean
+5. Undefined
+6. Null
+7. Symbol
+8. Object
+
+Declared with varibale 
+let- latest way allows for block scope , must be declared before use,
+cannot be redeclared within the same scope.
+var- similar as above but it can be redeclared 
+const - cannot be changer
+
+Variable names cannot contain spaces.
+
+Variable names must begin with a letter, an underscore (_) or a dollar sign ($).
+
+Variable names can only contain letters, numbers, underscores, or dollar signs.
+
+Variable names are case-sensitive.
+
+Certain words may not be used as variable names, because they have other
+meanings within JavaScript. Check out this complete list of the reserved
+words.
+USe CamelCase to name your variable
+
+Difference Between var, let and const
+       Scope	Redeclare	Reassign	Hoisted	   Binds this
+var	    No	     Yes	    Yes	       Yes	      Yes
+let	    Yes	     No	        Yes	      No	      No
+const	  Yes	     No	        No	       No	      No
+
+
+Conditional statement
+1 If
+if(cond){  }
+
+2. if else
+if(cond){
+
+} else {
+
+}
+
+3. el-if ladder
+if(cond 1){
+.
+} else if (cond 2){
+
+} else {
+
+}
+
+4. switch case
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+
+Control Statements
+LOOPS
+1. for LOOPS
+for(variable declare and intilize; ending condyion; increment of decrement){
+  code
+}
+
+2. while(condition){
+  work and increment and decrement
+}
+
+3. do while
+do{
+  work and increment
+} while(condition)
+
+4. for of
+for(let var of strVar){
+  code
+}
+
+The JavaScript for of statement loops through the values of an iterable object.
+
+It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:
+
+Syntax
+for (variable of iterable) {
+  // code block to be executed
+}
+
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of cars) {
+  text += x;
+} 
+
+
+5. for in
+The JavaScript for in statement loops through the properties of an Object:
+const person = {fname:"John", lname:"Doe", age:25};
+
+let text = "";
+for (let x in person) {
+  text += person[x];
+}
+
+The JavaScript for in statement can also loop over the properties of an Array:
+for(let key in objvar){
+  work
+}
+
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+for (let x in numbers) {
+  txt += numbers[x];
+}
+
+
+for (variable in array) {
+  code
+}
+
+
+keywords
+1. break 
+ breaks a loop if the given condition is meet
+
+The break statement "jumps out" of a loop.
+
+Continue
+The continue statement "jumps over" one iteration in the loop.
+
+
+
+5 Arrays 
+Arrays is a collection of values of same data Types
+let/var/const <array name>=[<value 1>,<value 2>];
+                          = new Array("Saab", "Volvo", "BMW");
+
+indexing in an array begins from 0
+
+has push() pop() toString
+ 
+for each loop methord
+
+
+6. String in Js
+Strings are a array of character it is short from stort texting
+intilized with ""
+
+Templeate literals is a way to embedded expressioon in Strings
+`hello my nane is ${name} `
+
+there are diiffrent in built function in js for string
+
+7. Functions 
+ Syntax
+function name(parameter1, parameter2, parameter3...) {
+  // code to be executed
+}
+
+parameter are listed inside ()
+arguments are values recived by function when it is invoked
+
+function can be used as Variable values
+ex let tesxt ="the temp is" + Celsius(x)+ "Cel";
+
+Variable declared with a function are local variable
+
+const x = function (a, b) {return a * b};
+let z = x(4, 3);
+
+Function() constroctor
+In JS functions are defined with keyword function .
+
+Functions can also be defined with a built-in Js function constroctor called Function().
+ Example
+const myFunction = new Function("a", "b", "return a * b");
+let x = myFunction(4, 3);
+
+Function Hoisting
+
+Self-Invoking Functions
+Function expressions will execute automatically if the expression is followed by ().
+
+(function () {
+  let x = "Hello!!";  // I will invoke myself
+})();
+
+Function are Objects !!
+The arguments.length property returns the number of arguments received when the function was invoked:
+
+Example
+function myFunction(a, b) {
+  return arguments.length;
+}
+
+Arrow function
+Allows you to short syntax function expression 
+No need for function keyword or return
+
+DO not have their own this
+not well suited for defining object methord.
+not Hoisted
+using const is safer than var because a function expression is always const value. 
+
+// ES5
+var x = function(x, y) {
+  return x * y;
+}
+
+// ES6
+const x= (x,y)=> x*y;
+
+Function Rest Parameter
+The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:
+
+Example
+function sum(...args) {
+  let sum = 0;
+  for (let arg of args) sum += arg;
+  return sum;
+}
+
+let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+
+Pass by value or pass by refrence
+
+
+*Higher order Function*
+callback function
+
+map methord  
+ arr.map(callback(val,index,arr)) - return an array
+
+filter function
+ create a new array where the givien condtion is true
+
+reduce function
+ Perform some operation and reduced the array to single value.
+ return a single value
+
+DOM Manipulation
