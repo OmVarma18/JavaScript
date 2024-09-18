@@ -277,4 +277,98 @@ reduce function
  Perform some operation and reduced the array to single value.
  return a single value
 
+
+Window object 
+It is defined and created by browser it has many functions like console.log
+
+The window object represents an open window in a browser. It is browser’s object (not JavaScript’s) & is automatically created by browser.
+
+It is a global object with lots of properties & methods.
+
+DOM - Document object model
+window<-document<-html
+
+console.log prints the element
+console.dir prints the properties and methords of document object
+We can access html element
+
+dom elements are not accessible if we call the elements before body tag 
+.getElementById
+.getElementByClassName
+.getElementByTagName
+.querySelector("id/class/tag") - returns first element  Write id as #id and write class with .class
+.querySelectorAll("id/class/tag") -returns a Node List
+
+
 DOM Manipulation
+
+tagName : returns tag for element nodes
+
+innerText : returns the text content of the element and all its children
+
+innerHTML : returns the plain text or HTML contents in the element
+
+textContent : returns textual content even for hidden elements
+
+Node FIrstschild
+There are 3 types of nodes - text comment element
+
+DOM Manipulation
+
+getAttribute( attr ) //to get the attribute value
+Attributes
+
+setAttribute( attr, value ) //to set the attribute value
+
+Style
+
+node.style
+
+DOM Manipulation
+
+node.append( el ) //adds at the end of node (inside)
+Insert Elements
+
+node.prepend( el ) //adds at the start of node (inside)
+
+let el = document.createElement(“div“)
+
+node.before( el ) //adds before the node (outside)
+
+node.after( el ) //adds after the node (outside)
+
+Delete Element
+
+node.remove( ) //removes the node
+
+Event Handling in JS
+
+node.event = ( ) => {
+//handle here
+}
+
+btn.onclick = ( ) => {
+console.log(“btn was clicked”);
+}
+
+js Code is prefered over in inline handeler
+
+Event Object
+
+It is a special object that has details about the event.
+
+All event handlers have access to the Event Object's properties and methods.
+
+node.event = (e) => {
+//handle here
+}
+
+e.target, e.type, e.clientX, e.clientY
+
+Event Listeners
+
+node.addEventListener( event, callback )
+
+node.removeEventListener( event, callback )
+
+*Note : the callback reference should be same to remove
