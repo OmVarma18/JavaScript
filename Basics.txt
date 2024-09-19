@@ -169,7 +169,7 @@ The continue statement "jumps over" one iteration in the loop.
 
 
 
-5 Arrays 
+5 Arrays  it is an object in JS
 Arrays is a collection of values of same data Types
 let/var/const <array name>=[<value 1>,<value 2>];
                           = new Array("Saab", "Volvo", "BMW");
@@ -372,3 +372,61 @@ node.addEventListener( event, callback )
 node.removeEventListener( event, callback )
 
 *Note : the callback reference should be same to remove
+
+
+CLasses and Object
+A JavaScript Object is an entity having state and behaviour- properties and behaviour
+const <variable> = {
+  key:value,
+}
+
+What is this?
+In JavaScript, the this keyword refers to an object.
+
+The this keyword refers to different objects depending on how it is used:
+
+In an object method, this refers to the object.
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+Methods like call(), apply(), and bind() can refer this to any object.
+
+JS objects have a special property called prototype
+
+const employee = {
+  calcTax(){
+    console.log("tax rate is 10%);
+  },
+};
+
+const karan ={
+  salary:5000;
+}
+karan.__proto__=employee;
+
+prototype is a refrence to an object 
+
+IF object & prototype have same method,
+object’s method will be used.
+
+Classes- template to creat objects  
+
+Object
+syntax - let ob_name = new class_name();
+
+Constructor in Js
+automatically invoked by new
+intilizes object
+
+class MyClass{
+  constructor(){
+  // initilization
+  }
+  method(){
+
+  }
+}
+
+
+
